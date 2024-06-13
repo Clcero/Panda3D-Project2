@@ -99,14 +99,12 @@ class MyApp(ShowBase):
         unitVec = defensePaths.CircleY(step) 
         unitVec.normalize()
         position = unitVec * radius * 500 + centralObject.modelNode.getPos()
-        print(f'Y: {position}')
         spaceJamClasses.Drone(self.loader, "./Assets/DroneDefender/DroneDefender.obj", self.render, droneName, "./Assets/DroneDefender/octotoad1_auv.png", position, 5)
 
     def DrawCircleZ(self, centralObject, droneName, step, radius=1):
         unitVec = defensePaths.CircleZ(step) 
         unitVec.normalize()
         position = unitVec * radius * 500 + centralObject.modelNode.getPos()
-        print(f'Z: {position}')
         spaceJamClasses.Drone(self.loader, "./Assets/DroneDefender/DroneDefender.obj", self.render, droneName, "./Assets/DroneDefender/octotoad1_auv.png", position, 5)
 
 
