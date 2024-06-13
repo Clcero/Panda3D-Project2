@@ -18,9 +18,7 @@ def BaseballSeams(step, numSeams, B, F = 1):
     '''Spawn drones in a baseball seam pattern'''
 
     time = step / float(numSeams) * 2 * math.pi
-
     F4 = 0
-
     R = 1
 
     xxx = math.cos(time) - B * math.cos(3 * time)
@@ -34,3 +32,18 @@ def BaseballSeams(step, numSeams, B, F = 1):
     z = R * zzz / rrr
 
     return Vec3(x, y, z)
+
+def CircleX(step):
+    theta = (step / 60) * 2 * math.pi
+    pos = 50.0 * math.cos(theta), 50.0 * math.sin(theta), 0.0
+    return Vec3(pos)
+
+def CircleY(step):
+    theta = (step / 60) * 2 * math.pi
+    pos = 50.0 * math.cos(theta), 0.0, 50.0 * math.sin(theta)
+    return Vec3(pos)
+
+def CircleZ(step):
+    theta = (step / 60) * 2 * math.pi
+    pos = 0.0, 50.0 * math.cos(theta), 50.0 * math.sin(theta)
+    return Vec3(pos)
