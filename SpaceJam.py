@@ -24,7 +24,7 @@ class MyApp(ShowBase):
         self._generate_drones()
 
         self.Universe = spaceJamClasses.Universe(self.loader, "./Assets/Universe/Universe.x", self.render, 'Universe', "Assets/Universe/Universe.jpg", (0, 0, 0), 15000)
-        self.SpaceStation1 = spaceJamClasses.SpaceStation(self.loader, "./Assets/Space Station/station.glb", self.render, 'Space Station', "./Assets/Space Station/Metal.jpg", (75, 500, 100), 1)
+        self.SpaceStation1 = spaceJamClasses.SpaceStation(self.loader, "./Assets/Space Station/spacestation.obj", self.render, 'Space Station', "./Assets/Space Station/Metal.jpg", (75, 500, 100), 0.1)
         self.Hero = spaceJamClasses.Spaceship(self.loader, "./Assets/Spaceships/spaceship.obj", self.render, 'Hero', "./Assets/Spaceships/spaceship.jpg", (1000, 1200, -50), 1, (0, 0, 90))
 
 
